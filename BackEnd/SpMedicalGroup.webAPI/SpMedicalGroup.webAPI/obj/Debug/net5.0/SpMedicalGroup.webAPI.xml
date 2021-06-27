@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SpMedicalGroup.webAPI</name>
+    </assembly>
+    <members>
+        <member name="M:SpMedicalGroup.webAPI.Controllers.ConsultasController.PatchSituation(System.Int32,SpMedicalGroup.webAPI.Domains.Consulta)">
+            <summary>
+            Altera a situação de uma consulta
+            </summary>
+            
+            <param name="id"> id da consulta que terá a situação alterada</param>
+            
+            <param name="situacao">Objeto com o parâmetro que atualiza a situação da consulta para agendada, realizada ou cancelada</param>
+            
+            <returns>Um status code 204 - No Content</returns> 
+        </member>
+        <member name="M:SpMedicalGroup.webAPI.Controllers.ConsultasController.GetMyDoc">
+            <summary>
+            Lista todas as consultas de um determinado médico
+            </summary>
+            
+            <returns>Uma lista de consultas e um status code 200 - Ok</returns>
+            [Authorize(Roles = "2")] // somente o médico pode acessar o método de listagem de suas consultas
+        </member>
+        <member name="M:SpMedicalGroup.webAPI.Controllers.ConsultasController.GetMyPac">
+            <summary>
+            Lista todas as consultas de um determinado paciente
+            </summary>
+            <returns>Uma lista de presenças e um status code 200 - Ok</returns>
+            [Authorize(Roles = "3")] // somente o paciente pode acessar o método de listagem de suas consultas
+        </member>
+        <member name="M:SpMedicalGroup.webAPI.Interfaces.IConsultaRepository.AlterarSituacaoConsulta(System.Int32,System.Int32)">
+            <summary>
+            Admnistrador ou médico podem alterar a situação de uma consulta
+            </summary>
+            
+            <param name="id">id da consulta que terá sua situação alterada</param>
+            
+            <param name="situacao"> int que atualiza a situação da consulta para:
+                                    1-agendada, 2-realizada ou 3-cancelada  </param>
+              
+        </member>
+        <member name="M:SpMedicalGroup.webAPI.Interfaces.IConsultaRepository.ListarConsultasMedico(System.Int32)">
+            <summary>
+            Lista todas as consultas específicas de um determinado médico
+            </summary>
+            
+            <param name="id">id de usuario do médico que participa das consultas listadas</param>
+            
+            <returns>Uma lista de consultas relacionadas a um determinado médico</returns>
+        </member>
+        <member name="M:SpMedicalGroup.webAPI.Interfaces.IConsultaRepository.ListarConsultasPaciente(System.Int32)">
+            <summary>
+            Lista todas as consultas específicas de um determinado paciente
+            </summary>
+            
+            <param name="id">id de usuario do paciente que participa das consultas listadas</param>
+            
+            <returns>Uma lista de consultas relacionadas a um determinado paciente</returns>
+        </member>
+    </members>
+</doc>

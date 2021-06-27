@@ -1,0 +1,968 @@
+{
+	"info": {
+		"_postman_id": "15a45133-4d96-4f0a-92c9-72db0f668750",
+		"name": "Senai_SPMedicalGroup_WebAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "TiposUsuarios",
+			"item": [
+				{
+					"name": "ListarTiposUsuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/tiposusuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tiposusuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarTipoUsuarioPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/tiposusuarios/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tiposusuarios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CadastrarTipoUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/tiposusuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tiposusuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarUrlTipoUsuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/tiposusuarios/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tiposusuarios",
+								"3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarTipoUsuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/tiposusuarios/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"tiposusuarios",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Usuarios",
+			"item": [
+				{
+					"name": "ListarUsuarios",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarUsuarioPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/usuarios/4",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"usuarios",
+								"4"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CadastrarUsuario",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/usuarios",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"usuarios"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarUrlUsuario",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/usuarios/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"usuarios",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarUsuario",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/usuarios/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"usuarios",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Clinicas",
+			"item": [
+				{
+					"name": "ListarClinicas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/clinicas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"clinicas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarClinicaPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/clinicas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"clinicas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CadastrarClinica",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/clinicas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"clinicas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarUrlClinica",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/clinicas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"clinicas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarClinica",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/clinicas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"clinicas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Medicos",
+			"item": [
+				{
+					"name": "ListarMedicos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/medicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"medicos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarMedicoPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/medicos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"medicos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CadastrarMedico",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/medicos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"medicos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarUrlMedico",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/medicos/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"medicos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarMedico",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/medicos/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"medicos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Especialidades",
+			"item": [
+				{
+					"name": "ListarEspecialidades",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/especialidades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"especialidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarEspecialidadePorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/especialidades/5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"especialidades",
+								"5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CadastrarEspecialidade",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/especialidades",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"especialidades"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarUrlEspecialidade",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/especialidades/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"especialidades",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarEspecialidade",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/especialidades/6",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"especialidades",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pacientes",
+			"item": [
+				{
+					"name": "ListarPacientes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/pacientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarPacientePorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/pacientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CadastrarPaciente",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/pacientes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"pacientes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarUrlPaciente",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/pacientes/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"pacientes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarPaciente",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/pacientes/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"pacientes",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Situacao",
+			"item": [
+				{
+					"name": "ListarSituacoes",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/situacoes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"situacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarSituacaoPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/situacoes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"situacoes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CadastrarSituacao",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/situacoes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"situacoes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarUrlSituacao",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/situacoes/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"situacoes",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarSituacao",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/situacoes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"situacoes",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Consultas",
+			"item": [
+				{
+					"name": "ListarConsultas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/consultas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "BuscarConsultaPorId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/consultas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CadastrarConsulta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/consultas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AtualizarUrlConsulta",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/consultas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DeletarConsulta",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/consultas/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "ListarMinhasConsultas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/consultas/minhas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas",
+								"minhas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AgendarConsulta",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/consultas/agendamento",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas",
+								"agendamento"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "AlterarSituacaoConsulta",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/consultas",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"consultas"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\" : \"saulo@email.com\",\r\n\r\n    \"senha\": \"89043\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
