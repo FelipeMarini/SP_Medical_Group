@@ -3,6 +3,8 @@ import { StyleSheet, Image, Text, View, FlatList, TouchableOpacity, } from 'reac
 import AsyncStorage from '@react-native-async-storage/async-storage'
 import api from '../services/api'
 
+import Header from '../components/header'
+
 
 
 class Paciente extends Component {
@@ -47,24 +49,6 @@ class Paciente extends Component {
     }
 
 
-    RealizarLogout = async () => {
-
-        try {
-
-            await AsyncStorage.removeItem('userToken')
-
-            this.props.navigation.navigate('Home')
-
-        }
-
-        catch (error) {
-
-            console.warn(error)
-
-        }
-
-    }
-
 
     componentDidMount() {
 
@@ -78,24 +62,7 @@ class Paciente extends Component {
             <View style={styles.main}>
 
 
-                <View style={styles.header}>
-
-                    <Image
-                        source={require('../../assets/img/hamburger.png')}
-                        style={styles.hamburger}
-                    />
-
-                    <Text style={styles.headerText}>{'clínica sp medical group'.toUpperCase()}</Text>
-
-                    <Image
-                        source={require('../../assets/img/logo.png')}
-                        style={styles.logo}
-                    />
-
-                </View>
-
-
-                {/* FIM HEADER */}
+                <Header />
 
 
                 <View style={styles.mainBody}>
@@ -107,14 +74,7 @@ class Paciente extends Component {
                             <Text style={styles.consultasTitle}>{'agenda - paciente'.toUpperCase()}</Text>
                         </View>
 
-                        <TouchableOpacity
-                            onPress={this.RealizarLogout}
-                            style={styles.btnLogout}
-                        >
-                            <View style={styles.btnLogoutBox}>
-                                <Text style={styles.btnLogoutText}>{'sair'.toUpperCase()}</Text>
-                            </View>
-                        </TouchableOpacity>
+
 
                     </View>
 
@@ -203,36 +163,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#aefad0',
     },
 
-    header: {
-        width: '100%',
-        height: 90,
-        backgroundColor: '#a7eff5',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-
-    hamburger: {
-        width: 40,
-        height: 40,
-    },
-
-    headerText: {
-        fontFamily: 'Roboto',
-        fontSize: 14,
-        fontWeight: 400,
-        color: '#000',
-        marginLeft: 25
-    },
-
-    logo: {
-        width: 70,
-        height: 74,
-        marginLeft: 30
-    },
-
-    // FIM HEADER
 
     flexBtns: {
         alignItems: 'center'
@@ -256,22 +186,6 @@ const styles = StyleSheet.create({
         fontSize: 18
     },
 
-    btnLogout: {
-        marginTop: 15,
-    },
-
-    btnLogoutBox: {
-        width: 100,
-        height: 20,
-        borderRadius: 6,
-        backgroundColor: '#b5aafa',
-        textAlign: 'center',
-    },
-
-    btnLogoutText: {
-        fontFamily: 'Roboto',
-        fontSize: 16
-    },
 
     consultasBtn: {
         width: '40%',

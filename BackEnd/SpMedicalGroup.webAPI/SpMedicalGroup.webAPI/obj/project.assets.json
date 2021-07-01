@@ -7540,11 +7540,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\SP-Medical-Group\\BackEnd\\SpMedicalGroup.webAPI\\SpMedicalGroup.webAPI\\SpMedicalGroup.webAPI.csproj",
+      "projectUniqueName": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\SP_Medical_Group\\BackEnd\\SpMedicalGroup.webAPI\\SpMedicalGroup.webAPI\\SpMedicalGroup.webAPI.csproj",
       "projectName": "SpMedicalGroup.webAPI",
-      "projectPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\SP-Medical-Group\\BackEnd\\SpMedicalGroup.webAPI\\SpMedicalGroup.webAPI\\SpMedicalGroup.webAPI.csproj",
+      "projectPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\SP_Medical_Group\\BackEnd\\SpMedicalGroup.webAPI\\SpMedicalGroup.webAPI\\SpMedicalGroup.webAPI.csproj",
       "packagesPath": "C:\\Users\\Felipe\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\SP-Medical-Group\\BackEnd\\SpMedicalGroup.webAPI\\SpMedicalGroup.webAPI\\obj\\",
+      "outputPath": "C:\\Users\\Felipe\\OneDrive\\Área de Trabalho\\SP_Medical_Group\\BackEnd\\SpMedicalGroup.webAPI\\SpMedicalGroup.webAPI\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"

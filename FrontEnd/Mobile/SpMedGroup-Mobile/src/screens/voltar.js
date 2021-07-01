@@ -1,16 +1,37 @@
 import React, { Component } from 'react'
 import { StyleSheet, Text, Image, View, TouchableOpacity } from 'react-native'
 
+import AsyncStorage from '@react-native-async-storage/async-storage'
+
 
 import Header from '../components/header'
 
 
-class Home extends Component {
+class Voltar extends Component {
 
 
     constructor(props) {
 
         super(props)
+
+    }
+
+
+    RealizarLogout = async () => {
+
+        try {
+
+            await AsyncStorage.removeItem('userToken')
+
+            this.props.navigation.navigate('Home')
+
+        }
+
+        catch (error) {
+
+            console.warn(error)
+
+        }
 
     }
 
@@ -28,7 +49,7 @@ class Home extends Component {
                 <View style={styles.mainBody}>
 
                     <Image
-                        source={require('../../assets/img/home-img.png')}
+                        source={require('../../assets/img/medica-fundo.png')}
                         style={styles.homeImg}
                     />
 
@@ -37,15 +58,12 @@ class Home extends Component {
 
 
                     <TouchableOpacity
-                        onPress={() => this.props.navigation.navigate('Login')}
+                        onPress={this.RealizarLogout}
+                        style={styles.btnLogout}
                     >
-
-                        <View style={styles.linkLogin}>
-
-                            <Text style={styles.linkLoginText}>{'login'.toUpperCase()}</Text>
-
+                        <View style={styles.btnLogoutBox}>
+                            <Text style={styles.btnLogoutText}>{'sair'.toUpperCase()}</Text>
                         </View>
-
                     </TouchableOpacity>
 
 
@@ -60,7 +78,7 @@ class Home extends Component {
 }
 
 
-export default Home
+export default Voltar
 
 
 
@@ -89,21 +107,21 @@ const styles = StyleSheet.create({
         marginTop: 25
     },
 
-    linkLogin: {
-        width: 200,
-        height: 40,
-        backgroundColor: '#a2c4fa',
-        borderRadius: 6,
-        marginTop: 25,
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center'
+    btnLogout: {
+        marginTop: 15,
     },
 
-    linkLoginText: {
+    btnLogoutBox: {
+        width: 100,
+        height: 20,
+        borderRadius: 6,
+        backgroundColor: '#b5aafa',
+        textAlign: 'center',
+    },
+
+    btnLogoutText: {
         fontFamily: 'Roboto',
-        fontSize: 18,
-        fontWeight: "700"
+        fontSize: 16
     }
 
 })

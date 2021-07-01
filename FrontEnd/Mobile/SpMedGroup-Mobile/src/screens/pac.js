@@ -1,18 +1,16 @@
 import React, { Component } from 'react'
 import { StyleSheet, Image, View } from 'react-native'
-
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-
-import jwtDecode from 'jwt-decode'
-
-import Médico from './listagem-med'
+import Voltar from './voltar'
 import Paciente from './listagem-pac'
 
 
 const bottomTab = createBottomTabNavigator()
 
 
-class Main extends Component {
+
+class Pac extends Component {
+
 
     render() {
 
@@ -22,7 +20,7 @@ class Main extends Component {
 
                 <bottomTab.Navigator
 
-                    initialRouteName='Home'
+                    initialRouteName='Voltar'
 
                     tabBarOptions={{
                         showLabel: true,
@@ -40,11 +38,12 @@ class Main extends Component {
 
                         tabBarIcon: () => {
 
-                            if (route.name === 'Médico') {
+
+                            if (route.name === 'Voltar') {
                                 return (
                                     <Image
                                         style={styles.tabBarIcon}
-                                        source={require('../../assets/img/ambulance.png')}
+                                        source={require('../../assets/img/house.png')}
                                     />
                                 )
                             }
@@ -62,12 +61,16 @@ class Main extends Component {
                     })}
                 >
 
-                    <bottomTab.Screen name='Médico' component={Médico} />
+                    <bottomTab.Screen name='Voltar' component={Voltar} />
                     <bottomTab.Screen name='Paciente' component={Paciente} />
 
                 </bottomTab.Navigator>
 
+
+
             </View>
+
+
 
         )
 
@@ -75,7 +78,7 @@ class Main extends Component {
 
 }
 
-export default Main
+export default Pac
 
 
 const styles = StyleSheet.create({

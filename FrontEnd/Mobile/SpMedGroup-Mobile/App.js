@@ -5,7 +5,8 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 import Home from './src/screens/home'
 import Login from './src/screens/login'
-import Main from './src/screens/main'
+import Med from './src/screens/med'
+import Pac from './src/screens/pac'
 
 
 const AuthStack = createStackNavigator() //ordem importa em AuthStack.Screen
@@ -23,7 +24,8 @@ function Stack() {
 
         <AuthStack.Screen name='Home' component={Home} />
         <AuthStack.Screen name='Login' component={Login} />
-        <AuthStack.Screen name='Main' component={Main} />
+        <AuthStack.Screen name='Med' component={Med} />
+        <AuthStack.Screen name='Pac' component={Pac} />
 
       </AuthStack.Navigator>
 

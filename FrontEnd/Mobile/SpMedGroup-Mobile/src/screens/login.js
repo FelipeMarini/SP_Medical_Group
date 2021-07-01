@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
 import { StyleSheet, Text, Image, TextInput, View, TouchableOpacity, } from 'react-native'
-import AsyncStorage from '@react-native-async-storage/async-storage'
 import api from '../services/api'
+import AsyncStorage from '@react-native-async-storage/async-storage'
+import jwtDecode from 'jwt-decode'
+import Header from '../components/header'
 
 
 
@@ -14,7 +16,8 @@ class Login extends Component {
         this.state = {
 
             email: '',
-            senha: ''
+            senha: '',
+            role: ''
 
         }
     }
@@ -37,7 +40,35 @@ class Login extends Component {
 
             await AsyncStorage.setItem('userToken', token)
 
-            this.props.navigation.navigate('Main')
+
+            //redirecionamento das bottom tabs de acordo com usuário logado (médico ou paciente)
+            const valorToken = await AsyncStorage.getItem('userToken')
+
+            console.warn(jwtDecode(valorToken))
+
+            if (valorToken !== null) {
+
+                this.setState({ role: jwtDecode(valorToken).role })
+
+                console.warn(this.state.role)
+
+            }
+
+            if (this.state.role == 2) { //ou this.state.role === '2' (estritamente igual) porque o JWT vem como string
+
+                this.props.navigation.navigate('Med')
+
+                console.warn('Indo para a bottom tab de médicos')
+
+            }
+
+            if (this.state.role == 3) { //ou this.state.role === '3' (estritamente igual) porque o JWT vem como string
+
+                this.props.navigation.navigate('Pac')
+
+                console.warn('Indo para a bottom tab de pacientes')
+
+            }
 
         }
 
@@ -71,24 +102,7 @@ class Login extends Component {
             <View style={styles.main}>
 
 
-                <View style={styles.header}>  {/* talvez mexer no posicionamento dos elementos do header*/}
-
-                    <Image
-                        source={require('../../assets/img/hamburger.png')}
-                        style={styles.hamburger}
-                    />
-
-                    <Text style={styles.headerText}>{'clínica sp medical group'.toUpperCase()}</Text>
-
-                    <Image
-                        source={require('../../assets/img/logo.png')}
-                        style={styles.logo}
-                    />
-
-                </View>
-
-
-                {/* FIM HEADER */}
+                <Header />
 
 
                 <View style={styles.mainBody}>
@@ -152,36 +166,6 @@ const styles = StyleSheet.create({
         backgroundColor: '#aefad0',
     },
 
-    header: {
-        width: '100%',
-        height: 90,
-        backgroundColor: '#a7eff5',
-        display: 'flex',
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
-    },
-
-    hamburger: {
-        width: 40,
-        height: 40,
-    },
-
-    headerText: {
-        fontFamily: 'Roboto',
-        fontSize: 14,
-        fontWeight: 400,
-        color: '#000',
-        marginLeft: 25
-    },
-
-    logo: {
-        width: 70,
-        height: 74,
-        marginLeft: 30
-    },
-
-    // FIM HEADER
 
     mainBody: {  //centraliza tudo na tela de login ;)
         justifyContent: 'center',
@@ -230,7 +214,7 @@ const styles = StyleSheet.create({
     btnLoginText: {
         fontFamily: 'Roboto', //pensar em outra fonte talvez melhor
         fontSize: 18,
-        fontWeight: 400,
+        //fontWeight: 400,
         color: '#000' //pensar em talvez outra cor também
     }
 
